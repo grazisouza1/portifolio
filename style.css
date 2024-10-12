@@ -1,18 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+:root{
+    --blue: #0466C8;
+    --black: #161616;
+    --white: #D8D8D8;
 }
 
 body{
     width: 100%;
     height: 100vh;
-    background-color: #161616;
+    background-color: var(--black);
+    cursor: url(/images/cursor-default.svg), auto;
+}
+
+.hero{
+    display: flex;
+    color: var(--white);
+
+}
+
+#graziella{
+    color: #0466C8;
 }
 
 .menu-bar{
     display: grid;
     grid-template-columns: auto;
-    gap: 40px;
+    gap: 70px;
+    border: var(--blue) 2px solid;
+    background-color: var(--black);
+    width: 80px;
+    border-radius: 8px;
+    padding:35px;
+    margin: 120px 80px;
+    justify-content: center;
+    place-items: center;
+    position: fixed;
 }
 
+.icon-side-bar:hover{
+    cursor: url(/images/cursor-click.svg), auto;
+}
+
+#hello-hand{
+    width: 180px;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 200px 280px;
+}
+
+#home-title{
+    font-size: 80px;
+    padding: 10px;
+}
+
+#home-description{
+    font-weight: 500;
+    font-size: 35px;
+    padding: 10px;
+}
+
+.home-text{
+    margin: 0px 30px;
+    max-width: 900px;
+}
+
+.activate-icon{
+    background-color: var(--blue);
+    padding: 10px;
+    border-radius: 10px;
+}
