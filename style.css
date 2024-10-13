@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Inter, sans-serif;
+    color: var(--white);
 }
 
 :root{
@@ -15,7 +16,6 @@
 
 body{
     width: 100%;
-    height: auto;
     background-color: var(--black);
     cursor: url(/images/cursor-default.svg), auto;
 }
@@ -25,7 +25,8 @@ body{
     grid-template-rows: repeat(2, 100vh);
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 200vh;
+    height: auto;
+    min-height: 500vh;
 }
 
 .hero{
@@ -35,6 +36,7 @@ body{
     scroll-snap-align: start;
     position: fixed;
     height: 100vh;
+    width: 100%;
     z-index: 1;
     background-color:#161616;
     background-image:radial-gradient(at 80% 100%, hsla(210,96%,30%,0.6) 0px, transparent 30%),radial-gradient(at 0% 0%, hsla(210,96%,40%,0.6) 0px, transparent 50%);
@@ -80,6 +82,7 @@ body{
 
 .icon-side-bar:hover{
     cursor: url(/images/cursor-click.svg), auto;
+    
 }
 
 #hello-hand{
@@ -118,26 +121,186 @@ body{
 
 .container2{
     background-color: var(--black);
-    height: 100%;
+    height: 200vh;
     width: 100%;
     z-index: 2;
-    position: relative;
     margin-top: 100vh;
+    margin-left: 10px;
     scroll-snap-align: start;
     border-radius: 5rem 5rem 0 0;
 }
 
 .exp-section{
+    margin: 30px 0;
 }
 
-#exp-title{
+.exp-content{
+    display: flex;
+    justify-content: center;
+}
+
+.exp-text{
+    margin: 0 0 0 40px;
+}
+
+.section-title{
+    display: flex;
     color: var(--white);
-    margin: 120px 250px;
+    margin: 100px 0 50px 250px ;
     font-size: 70px;
     background-color: #0466C8;
     padding: 10px 20px;
-    width: 405px;
+    width: auto;
+    max-width: 450px;
+    justify-content: center;
+}
+
+.icon{
+    cursor: url(images/cursor-click.svg), auto;
+}
+
+.project{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 70px;
+}
+
+.project-img{
+    width: 300px;
+    height: auto;
+    margin: 0 20px 0 0;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.project-title{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.project-title h2{
+    border-bottom: var(--blue) 3px solid;
+}
+
+.project-text{
+    margin: 0 0 0 40px;
+}
+
+.project-desc{
+    margin: 20px 0;
+    padding: 10px 0;
+    max-width: 400px;
+}
+
+.technologies{
+    margin: 40px 0 0 0;
+}
+
+.technologies h3{
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+.technology-icon{
+    padding: 5px;
+    margin: 5px;
+}
+
+.arrow{
+    cursor: url(images/cursor-click.svg), auto;
 }
 
 .cert-section{
+    height: 160vh;
+    scroll-snap-align: start;
+    background-color: var(--black);
+    padding: 30px 0;
+}
+
+.certificate-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px 50px 50px 250px;
+    gap: 40px 10px;
+}
+
+.certificate-card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    border: var(--blue) 2px solid;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    max-width: 480px;
+    border-radius: 20px;
+    padding: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.certificate-imgs{
+    display: grid;
+    grid-template-areas: 
+    'cev git'
+    'cev github';
+}
+
+#cev-img{
+    grid-area: cev;
+}
+
+#git-img{
+    grid-area: git;
+    height: 100%;
+
+}
+
+#github-img{
+    grid-area: github;
+    height: 100%;
+}
+
+.certificate-imgs img{
+    border-radius: 18px;
+    margin: 0 10px;
+}
+
+.certificate-text{
+    margin: 20px 0;
+}
+
+.certificate-text h3{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.certificate-text h3 span{
+    text-decoration: underline;
+}
+
+.certificate-btns button{
+    margin: 0 10px;
+    width: 150px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    background-color: var(--blue);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: 600;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    cursor: url(images/cursor-click.svg), auto;
+    transition: linear 0.1s;
+}
+
+.certificate-btns button:hover{
+    background-color: var(--black);
+    border: var(--blue) 2px solid;
+}
+
+.abt-me-section{
+    background-color: var(--black);
+    height: 100vh;
 }
