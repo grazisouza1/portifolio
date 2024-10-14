@@ -26,7 +26,7 @@ body{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: auto;
-    min-height: 500vh;
+    min-height: 490vh;
 }
 
 .hero{
@@ -80,9 +80,17 @@ body{
     box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.4);
 }
 
-.icon-side-bar:hover{
+.icon-side-bar{
     cursor: url(/images/cursor-click.svg), auto;
-    
+    background-color: var(--black);
+    transition: backgound-color 0.3s ease;
+    padding: 15px;
+}
+
+.icon-side-bar.active{
+    background-color: var(--blue);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 #hello-hand{
@@ -113,21 +121,25 @@ body{
     max-width: 900px;
 }
 
-.activate-icon{
-    background-color: var(--blue);
-    padding: 10px;
-    border-radius: 10px;
-}
-
 .container2{
     background-color: var(--black);
-    height: 200vh;
-    width: 100%;
+    height: 100vh;
+    width: 100;
     z-index: 2;
     margin-top: 100vh;
-    margin-left: 10px;
     scroll-snap-align: start;
     border-radius: 5rem 5rem 0 0;
+    position: relative;
+    margin-left: 10px;
+}
+
+.main-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-page p{
+    font-size: 300px;
 }
 
 .exp-section{
@@ -221,7 +233,7 @@ body{
 .certificate-cards{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 50px 50px 50px 250px;
+    margin: 80px 50px 50px 250px;
     gap: 40px 10px;
 }
 
@@ -293,6 +305,12 @@ button{
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
     cursor: url(images/cursor-click.svg), auto;
     transition: linear 0.1s;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: url(images/cursor-click.svg), auto;
 }
 
 .certificate-btns button:hover{
@@ -302,5 +320,50 @@ button{
 
 .abt-me-section{
     background-color: var(--black);
-    height: 100vh;
+    height: 130vh;
+    scroll-snap-align: start;
+    padding: 20px 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.abt-me-section .section-title{
+    margin-top: 30px;
+}
+
+.abt-me-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px 150px;
+    padding: 50px 100px;
+    gap: 150px;
+}
+
+#abt-me-text{
+    font-size: 20px;
+    max-width: 600px;
+    text-indent: 30px;
+}
+
+#footer{
+    width: 100%;
+    border-radius: 0 0 5rem 5rem;
+    position: absolute;
+    z-index: 2;
+    margin: 700px 0 0 0;
+}
+
+.footer-content{ 
+    position: relative;
+}
+
+.footer-text{
+    position: absolute;
+}
+
+.footer h1{
+    position: absolute;
+    color: var(--white);
 }

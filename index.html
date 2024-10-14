@@ -8,10 +8,10 @@
 </head>
 <body>
     <aside class="menu-bar">
-        <img class="icon-side-bar activate-icon" id="home-icon" src="images/home-icon.svg" title="Home section">
-        <img class="icon-side-bar" id="exp-icon" src="images/experience-icon.svg" title="Experiences section">
-        <img class="icon-side-bar" id="cert-icon" src="images/certificate-icon.svg" title="Certificates section">
-        <img class="icon-side-bar" id="prof-icon" src="images/profile-icon.svg" title="About Me section">
+        <a href="#home"><img class="icon-side-bar" id="home-icon" src="images/home-icon.svg" title="Home section"></a>
+        <a href="#container2"><img class="icon-side-bar" id="exp-icon" src="images/experience-icon.svg" title="Experiences section"></a>
+        <a href="#certificates"><img class="icon-side-bar" id="cert-icon" src="images/certificate-icon.svg" title="Certificates section"></a>
+        <a href="#about-me"><img class="icon-side-bar" id="prof-icon" src="images/profile-icon.svg" title="About Me section"></a>
     </aside>
 
     <div class="container1">
@@ -26,94 +26,123 @@
             </div>
         </div>
 
-        <div class="container2">
-            <div class="exp-section">
-                <h1 class="section-title">Experience</h1>
-                <div class="exp-content">
-                    <img class="arrow" src="images/seta-esq.svg" alt="">
-                    <div class="project">
-                        <img class="project-img" src="images/calculator-img.svg" alt="">
-                        <div class="exp-text">
-                            <div class="project-title">
-                                <h2>Calculator</h2>
-                                <img class="icon" src="images/share-icon.svg" alt="">
+        <div id="home" class="main-page">
+            <p>SETA</p>
+            <div id="container2" class="container2">
+                <div id="experience" class="exp-section">
+                    <h1 class="section-title">Experience</h1>
+                    <div class="exp-content">
+                        <img class="arrow" src="images/seta-esq.svg" alt="">
+                        <div class="project">
+                            <img class="project-img" src="images/calculator-img.svg" alt="">
+                            <div class="exp-text">
+                                <div class="project-title">
+                                    <h2>Calculator</h2>
+                                    <a href="https://foundation-projects-gra.vercel.app/basic-calculator/index.html" target="_blank"><img class="icon" src="images/share-icon.svg" alt=""></a>
+                                </div>
+                                <div class="project-desc">
+                                    A calculator with basic operations. The design is not responsive
+                                </div>
+                                <div class="technologies">
+                                    <h3>Technologies:</h3>
+                                        <img class="technology-icon" src="images/html-icon.svg" alt="">
+                                        <img class="technology-icon" src="images/css-icon.svg" alt="">
+                                        <img class="technology-icon" src="images/js-icon.svg" alt="">
+                                </div>
                             </div>
-                            <div class="project-desc">
-                                A calculator with basic operations. The design is not responsive
-                            </div>
-                            <div class="technologies">
-                                <h3>Technologies:</h3>
-                                    <img class="technology-icon" src="images/html-icon.svg" alt="">
-                                    <img class="technology-icon" src="images/css-icon.svg" alt="">
-                                    <img class="technology-icon" src="images/js-icon.svg" alt="">
-                            </div>
                         </div>
-                    </div>
-                    <img class="arrow" src="images/seta-dir.svg" alt="">
-                </div>
-            </div>
-
-            <div class="cert-section">
-                <h1 class="section-title">Certificates</h1>
-                <div class="certificate-cards">
-                    <div class="certificate-card">
-                        <div class="certificate-imgs">
-                            <img src="images/cev-icon.svg" title="Curso em Vídeo" width="150px">
-                            <img src="images/js-icon.svg" title="JavaScript" width="150px">
-                        </div>
-                        <div class="certificate-text">
-                            <h2>JavaScript (40 Hours)</h2>
-                            <h3>By <span>Curso Em Vídeo</span></h3>
-                        </div>
-                        <div class="certificate-btns">
-                            <button>Acess Course</button>
-                            <button>Certificate</button>
-                        </div>
-                    </div>
-
-                    <div class="certificate-card">
-                        <div class="certificate-imgs">
-                            <img id="cev-img" src="images/cev-icon.svg" title="Curso em Vídeo" width="150px">
-                            <img id="git-img" src="images/algorithms-img.svg" title="Git" width="150px">
-                        </div>
-                        <div class="certificate-text">
-                            <h2>Algorithms (40 Hours)</h2>
-                            <h3>By <span>Curso Em Vídeo</span></h3>
-                        </div>
-                        <div class="certificate-btns">
-                            <button>Acess Course</button>
-                            <button>Certificate</button>
-                        </div>
-                    </div>
-
-                    <div class="certificate-card">
-                        <div class="certificate-imgs">
-                            <img id="cev-img" src="images/cev-icon.svg" title="Curso em Vídeo" width="150px">
-                            <img id="git-img" src="images/git-img.svg" title="Git" width="150px" height="75px">
-                            <img id="github-img" src="images/github-img.svg" title="GitHub" height="75px" width="150px">
-                        </div>
-                        <div class="certificate-text">
-                            <h2>Git and Github (20 Hours)</h2>
-                            <h3>By <span>Curso Em Vídeo</span></h3>
-                        </div>
-                        <div class="certificate-btns">
-                            <button>Acess Course</button>
-                            <button>Certificate</button>
-                        </div>
+                        <img class="arrow" src="images/seta-dir.svg" alt="">
                     </div>
                 </div>
-            </div>
 
-            <div class="abt-me-section">
-                <h1 class="section-title">About Me</h1>
-                <div class="abt-me-content">
-                    <p id="abt-me-text">
-                        I started self-learned HTML and CSS, then I took the entrance exam for a Cross-platform Software Development college, and started studying there in February 2024. I’ve been improve my skills on web development scheduled for completion in December 2027.
-                    </p>
-                    <img src="" id="abt-me-img" title="Graziella Souza (Me)">
+                <div id="certificates" class="cert-section">
+                    <h1 class="section-title">Certificates</h1>
+                    <div class="certificate-cards">
+                        <div class="certificate-card"> <!--JavaScript card-->
+                            <div class="certificate-imgs">
+                                <img src="images/cev-icon.svg" title="Curso em Vídeo" width="150px">
+                                <img src="images/js-icon.svg" title="JavaScript" width="150px">
+                            </div>
+                            <div class="certificate-text">
+                                <h2>JavaScript (40 Hours)</h2>
+                                <h3>By <span>Curso Em Vídeo</span></h3>
+                            </div>
+                            <div class="certificate-btns">
+                                <button><a href="https://www.cursoemvideo.com/curso/javascript/" target="_blank">Acess Course</a></button>
+                                <button><a href="https://www.cursoemvideo.com/certificates/certificado/?course_id=27745&cert-nonce=40f1911a11" target="_blank">Certificate</a></button>
+                            </div>
+                        </div>
+
+                        <div class="certificate-card"> <!--Algorithms card-->
+                            <div class="certificate-imgs">
+                                <img id="cev-img" src="images/cev-icon.svg" title="Curso em Vídeo" width="150px">
+                                <img id="algorithms-img" src="images/algorithms-img.svg" title="Algorithms" width="150px">
+                            </div>
+                            <div class="certificate-text">
+                                <h2>Algorithms (40 Hours)</h2>
+                                <h3>By <span>Curso Em Vídeo</span></h3>
+                            </div>
+                            <div class="certificate-btns">
+                                <button><a href="https://www.cursoemvideo.com/curso/curso-de-algoritmo/" target="_blank">Acess Course</a></button>
+                                <button><a href="" target="_blank">Certificate</a></button>
+                            </div>
+                        </div>
+
+                        <div class="certificate-card"> <!--Git and Github card-->
+                            <div class="certificate-imgs">
+                                <img id="cev-img" src="images/cev-icon.svg" title="Curso em Vídeo" width="150px">
+                                <img id="git-img" src="images/git-img.svg" title="Git" width="150px" height="75px">
+                                <img id="github-img" src="images/github-img.svg" title="GitHub" height="75px" width="150px">
+                            </div>
+                            <div class="certificate-text">
+                                <h2>Git and Github (20 Hours)</h2>
+                                <h3>By <span>Curso Em Vídeo</span></h3>
+                            </div>
+                            <div class="certificate-btns">
+                                <button><a href="https://www.cursoemvideo.com/curso/curso-de-git-e-github/" target="_blank">Acess Course</a></button>
+                                <button><a href="" target="_blank">Certificate</a></button>
+                            </div>
+                        </div>
+
+                        <div class="certificate-card"> <!--NLW card-->
+                            <div class="certificate-imgs">
+                                <img id="rocketseat-img" src="images/rocketseat-dark.svg" title= Rocket Seat" width="150px">
+                                <img id="nlw-img" src="images/nlw-img.svg" title="NLW" width="150px">
+                            </div>
+                            <div class="certificate-text">
+                                <h2>NLW 17</h2>
+                                <h3>By <span>RocketSeat</span></h3>
+                            </div>
+                            <div class="certificate-btns">
+                                <button><a href="https://www.rocketseat.com.br/" target="_blank">Acess Course</a></button>
+                                <button><a href="https://app.rocketseat.com.br/certificates/da3c89b2-ddc7-4dfd-9fc7-cd40782f45b5" target="_blank">Certificate</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="about-me" class="abt-me-section">
+                    <h1 class="section-title">About Me</h1>
+                    <div class="abt-me-content">
+                        <p id="abt-me-text">
+                            I started self-learned HTML and CSS, then I took the entrance exam for a Cross-platform Software Development college, and started studying there in February 2024. I’ve been improve my skills on web development scheduled for completion in December 2027.
+                        </p>
+                        <img src="" id="abt-me-img" title="Graziella Souza (Me)">
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="footer-content"></div>
+                        <img id="footer" src="images/footer.svg" alt="footer">
+                        <div class="footer-text">
+                            <h1>Contect Me!</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
