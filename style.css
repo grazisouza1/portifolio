@@ -96,11 +96,13 @@ body {
   border: var(--blue) 2px solid;
   background-color: var(--black);
   height: 60px;
-  width: 300px;
+  min-width: 280px;
   border-radius: 5rem;
   /*padding: 35px;*/
   bottom: 0;
-  margin: 30px;
+  left: 0;
+  right: 0;
+  margin: 30px 30px 30px 20px;
   justify-content: center;
   place-items: center;
   position: fixed;
@@ -171,10 +173,10 @@ body {
 
 .project {
   display: flex;
+  align-items: center;
   background-color: var(--black);
   border-radius: 20px;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-  width: 365px;
 }
 
 .projects {
@@ -263,7 +265,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin: 10px;
+  margin: 10px 20px;
 }
 
 .certificate-card {
@@ -272,23 +274,25 @@ body {
   background-color: var(--black);
   border: var(--blue) 2px solid;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-  max-width: 365px;
   border-radius: 20px;
-  padding: 20px;
+  padding: 5px 10px 15px 10px;
+  margin: 0 20px;
+  min-width: 300px;
 }
 
 .certificate-content {
   display: flex;
   flex-direction: row;
   margin: 0 0 10px 0;
+  align-items: center;
 }
 
-.certificate-imgs {
+/* .certificate-imgs {
   display: grid;
   grid-template-areas:
     "cev git"
     "cev github";
-}
+} */
 
 /* .course-img {
   grid-area: cev;
@@ -299,7 +303,7 @@ body {
 }
 
 .certificate-imgs img {
-  width: 100px;
+  width: 80px;
   border-radius: 18px;
   margin: 0 10px;
 }
@@ -308,9 +312,13 @@ body {
   margin: 20px 0 20px 20px;
 }
 
+.certificate-text h2 {
+  font-size: 18px;
+}
+
 .certificate-text h3 {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .certificate-text h3 span {
@@ -319,7 +327,7 @@ body {
 
 .certificate-btns button {
   margin: 0 10px;
-  width: 300px;
+  width: 190px;
 }
 
 .certificate-btns {
