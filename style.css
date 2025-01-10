@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: Inter, sans-serif;
   color: var(--white);
+  /* outline: red 2px solid;' */
 }
 
 :root {
@@ -14,16 +15,28 @@
   --white: #d8d8d8;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   cursor: url(/images/cursor-default.svg), auto;
   background-color: var(--black);
   background-image: radial-gradient(
-      at 80% 100%,
+      circle at 80% 100%,
       hsla(210, 96%, 30%, 0.6) 0px,
       transparent 30%
     ),
-    radial-gradient(at 0% 0%, hsla(210, 96%, 40%, 0.6) 0px, transparent 50%);
+    radial-gradient(
+      circle at 0% 0%,
+      hsla(210, 96%, 40%, 0.6) 0px,
+      transparent 50%
+    );
+
   overflow-x: hidden;
 }
 
@@ -35,8 +48,9 @@ body {
 .hero {
   display: flex;
   color: var(--white);
-  height: 100vh;
   width: 100%;
+  justify-content: center;
+  height: 100vh;
 }
 
 #graziella {
@@ -71,6 +85,8 @@ body {
   text-align: center;
   justify-content: center;
   gap: 30px;
+  margin: 120px 0;
+  width: 100%;
 }
 
 #home-title {
@@ -86,47 +102,57 @@ body {
 
 .home-text {
   margin: 0 30px;
-  max-width: 900px;
+  width: 80%;
 }
 
 .menu-bar {
+  margin: 0 0 20px 0;
   display: flex;
   flex-direction: row;
-  gap: 25px;
+  gap: 15px;
   border: var(--blue) 2px solid;
   background-color: var(--black);
   height: 60px;
-  min-width: 280px;
   border-radius: 5rem;
   /*padding: 35px;*/
   bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 30px 30px 30px 20px;
   justify-content: space-evenly;
   padding: 0 15px;
   place-items: center;
   position: fixed;
   z-index: 2;
   box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.4);
+  width: 85%;
+  height: 9.5%;
 }
 
 .icon-side-bar {
-  width: 42px;
+  width: 35px;
   cursor: url(/images/cursor-click.svg), auto;
   background-color: var(--black);
   transition: backgound-color 0.3s ease;
   padding: 10px;
 }
 
+.icon-side-bar:hover {
+  opacity: 40%;
+}
+
 .icon-side-bar.active {
   background-color: var(--blue);
   padding: 10px;
   border-radius: 10px;
-  /* transition: linear 0.5s; */
+}
+
+.filter-btn.active {
+  background-color: var(--blue);
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-position: right;
 }
 
 .main-page {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -135,69 +161,62 @@ body {
   font-size: 300px;
 }
 
-.exp-section {
-  width: 100%;
-  margin: 30px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.exp-content {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-}
-
-.exp-text {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin: 20px 30px;
-  max-width: 200px;
-}
-
 .section-title {
   display: flex;
   color: var(--white);
-  margin: 0;
-  font-size: 40px;
+  margin: 20px 0;
+  font-size: 25px;
   background-color: #0466c8;
   padding: 10px 10px;
-  max-width: 240px;
   justify-content: center;
   text-align: center;
+  width: 50%;
 }
 
 .icon {
   cursor: url(images/cursor-click.svg), auto;
 }
 
-.project {
-  width: 90%;
-  justify-content: space-around;
+.icon:hover {
+  opacity: 40%;
+}
+
+.section {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.exp-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   background-color: var(--black);
   border-radius: 20px;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+  padding: 12px;
+  justify-content: space-around;
+  width: fit-content;
 }
 
 .projects {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 15px 0;
+  margin: 8px;
+  align-items: center;
+  overflow-x: hidden;
 }
-
-/* .project-img {
-  width: 240px;
-  height: auto;
-  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  margin: 25px 0;
-} */
 
 .project-img {
   display: none;
@@ -207,70 +226,89 @@ body {
   font-size: 15px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 50px;
+  width: fit-content;
 }
 
 .project-title h2 {
   border-bottom: var(--blue) 3px solid;
+  font-size: 15px;
+}
+
+.project-text {
+  width: 70%;
+  margin: 5px;
+}
+
+.icon-cel {
+  width: 70%;
 }
 
 .icon-pc {
   display: none;
 }
 
-.project-text {
-  margin: 0 0 0 40px;
-}
-
 .project-desc {
   margin: 5px 0;
   padding: 10px 0;
-  max-width: 250px;
-  font-size: 15px;
+  font-size: 10px;
 }
-
-/* .technologies {
-  margin: 40px 0 0 0;
-}*/
 
 .technologies {
   display: none;
 }
 
-/* .technologies h3 {
-  margin: 5px 0;
-  padding: 5px 0;
-} */
-
-/*.technology-icon {
-  padding: 5px;
-  margin: 5px;
-}*/
+.technologies-title {
+  display: none;
+}
 
 .technology-icon {
   display: none;
 }
 
-/*.arrow {
-  cursor: url(images/cursor-click.svg), auto;
-} */
-
 .arrow {
-  display: none;
+  cursor: url(images/cursor-click.svg), auto;
+  margin: 15px;
+  width: 2%;
+  align-items: center;
+  justify-content: center;
 }
 
-.cert-section {
+.arrow:hover {
+  opacity: 40%;
+}
+
+.certificates-filter {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 0;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--black);
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 85%;
+  position: relative;
+}
+
+.filter-btn {
+  outline: 2px var(--black) solid;
+  position: relative;
+  padding: 5px 10px;
+}
+
+.filter-btn:hover {
+  outline: 2px #0466c87e solid;
+  border-radius: 5px;
 }
 
 .certificate-cards {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin: 10px 20px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  width: 80%;
 }
 
 .certificate-card {
@@ -280,35 +318,31 @@ body {
   border: var(--blue) 2px solid;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
-  padding: 5px 10px 15px 10px;
-  margin: 0 20px;
-  min-width: 300px;
+  padding: 5px 15px 15px 15px;
+  width: 100%;
 }
 
-.certificate-content {
+.card-content {
   display: flex;
   flex-direction: row;
   margin: 0 0 10px 0;
   align-items: center;
 }
 
-/* .certificate-imgs {
-  display: grid;
-  grid-template-areas:
-    "cev git"
-    "cev github";
-} */
-
-/* .course-img {
-  grid-area: cev;
-} */
-
 .subject-img {
   display: none;
 }
 
+.certificate-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .certificate-imgs img {
-  width: 80px;
+  width: 70px;
   border-radius: 18px;
   margin: 0 10px;
 }
@@ -332,7 +366,12 @@ body {
 
 .certificate-btns button {
   margin: 0 10px;
-  width: 190px;
+  background-color: var(--blue);
+  border: 2px var(--blue) solid;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: 600;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 .certificate-btns {
@@ -344,11 +383,6 @@ body {
 button {
   background-color: transparent;
   border: none;
-  background-color: var(--blue);
-  border-radius: 30px;
-  padding: 10px 20px;
-  font-weight: 600;
-  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
   cursor: url(images/cursor-click.svg), auto;
   transition: linear 0.1s;
   text-decoration: none;
@@ -365,15 +399,7 @@ a {
 }
 
 .abt-me-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
-  width: 100%;
-}
-
-.abt-me-section .section-title {
-  margin-top: 30px;
+  margin: 30px 0 0 0;
 }
 
 .abt-me-content {
@@ -385,6 +411,20 @@ a {
   gap: 50px;
 }
 
+.abt-me-img:hover {
+  transform: scale(1.1);
+}
+
+.abt-me-img {
+  padding: 10px;
+  width: 60%;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  border: 2px var(--blue) solid;
+  transition: transform 0.3s ease;
+}
+
 #abt-me-text {
   font-size: 20px;
   text-align: center;
@@ -392,13 +432,13 @@ a {
 
 footer {
   background-color: var(--black);
-  padding: 30px 30px 100px 30px;
+  padding: 30px 0 100px 30px;
   border-radius: 30px 30px 0 0;
   box-shadow: 5px 5px 20px 5px hsla(0, 0%, 0%, 0.404);
 }
 
 .footer-title {
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .social-medias {
@@ -409,13 +449,284 @@ footer {
 }
 
 .media-icon {
-  font-size: 25px;
+  font-size: 15px;
 }
 
 @media screen and (min-width: 768px) {
+  #home-description {
+    font-size: 30px;
+  }
+
   .menu-bar {
-    max-width: 600px;
-    margin: 0 0 30px 90px;
-    position: fixed;
+    height: 8%;
+    margin: 0 0 30px 0;
+  }
+
+  .icon-side-bar {
+    width: 50px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .project-title h2 {
+    font-size: 20px;
+  }
+
+  .project-desc {
+    font-size: 15px;
+  }
+
+  .certificates-filter {
+    margin: 25px;
+    padding: 20px;
+  }
+
+  .filter-btns {
+    display: flex;
+    gap: 60px;
+  }
+
+  .filter-btn {
+    font-size: 25px;
+    padding: 15px;
+  }
+
+  .filter-btn.active {
+    padding: 15px;
+  }
+
+  .certificate-cards {
+    width: 70%;
+    gap: 30px;
+  }
+
+  .certificate-card {
+    padding: 15px;
+  }
+
+  .certificate-btns button {
+    width: 90%;
+  }
+
+  .abt-me-img {
+    width: 30%;
+  }
+
+  #abt-me-text {
+    width: 90%;
+  }
+
+  footer {
+    padding: 40px 40px 120px 40px;
+  }
+
+  .footer-title {
+    font-size: 15px;
+  }
+
+  .media-icon {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    max-width: 90%;
+    margin: 30px;
+  }
+
+  .menu-bar {
+    place-items: center;
+    flex-direction: column;
+    padding: 15px;
+    gap: 30px;
+    height: auto;
+    max-width: 70px;
+    margin: 0 0 40px 25px;
+    left: 0;
+    top: 20%;
+    bottom: 20%;
+    align-items: center;
+  }
+
+  .icon-side-bar {
+    width: 45px;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    max-width: 800px;
+    max-height: 500px;
+    margin: 100px 0;
+  }
+
+  #home-description {
+    font-size: 25px;
+  }
+
+  #home-title {
+    font-size: 70px;
+  }
+
+  #hello-hand {
+    width: 180px;
+  }
+
+  .main-page {
+    justify-content: end;
+    align-items: flex-end;
+    gap: 60px;
+  }
+
+  .exp-section {
+    gap: 50px;
+  }
+
+  .project-title h2 {
+    font-size: 22px;
+  }
+
+  .project {
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 480px;
+    height: 275px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .project-text {
+    max-width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-img {
+    display: block;
+    width: 30%;
+    height: 50%;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+
+  .technologies {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .technologies-title {
+    margin: 5px 0;
+    padding: 5px 0;
+    font-size: 14px;
+  }
+
+  .technology-icon {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    width: 50px;
+  }
+
+  .arrow {
+    display: none;
+    width: 20px;
+  }
+
+  .project-desc {
+    font-size: 15px;
+  }
+
+  .icon-cel {
+    width: 30px;
+  }
+
+  .certificate-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .certificate-card {
+    width: 45%;
+    padding: 1% 1% 2% 1%;
+    gap: 15px;
+  }
+
+  .certificate-imgs img {
+    width: 90px;
+  }
+
+  .certificate-text h2 {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+
+  .certificate-text h3 {
+    font-size: 15px;
+    margin: 10px 0;
+  }
+
+  .certificate-text span:hover {
+    opacity: 40%;
+  }
+
+  .certificate-btns button {
+    font-size: 18px;
+  }
+
+  .abt-me-img {
+    width: 25%;
+  }
+
+  #abt-me-text {
+    font-size: 25px;
+  }
+
+  .footer-title {
+    font-size: 20px;
+  }
+
+  footer {
+    width: 100%;
+    padding: 30px 0 100px 120px;
+  }
+
+  .media-icon {
+    font-size: 35px;
+    transition: linear 0.3s;
+  }
+
+  .media-icon:hover {
+    opacity: 40%;
+  }
+
+  .certificate-imgs img {
+    display: block;
+  }
+
+  .certificate-imgs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .course-img {
+    grid-area: cev;
+  }
+
+  .git-github-img img {
+    width: 100%;
   }
 }
