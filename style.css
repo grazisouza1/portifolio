@@ -24,7 +24,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  cursor: url(/images/cursor-default.svg), auto;
+  cursor: url(images/cursor-default.svg), auto;
   background-color: var(--black);
   background-image: radial-gradient(
       circle at 80% 100%,
