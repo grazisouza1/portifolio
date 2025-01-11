@@ -12,6 +12,7 @@ This repository is a portifolio to show some of my projects, besides some course
   
   - [How did I built that](#how-did-i-build-that)
   - [The problems I had](#the-problems-i-had)
+  - [The website structure](#the-website-structure)
 
   ## How did I build that
   &nbsp; The firts thing i did, was a Figma project, trying to imagine how it would look like. The final project didn't go exactly as planned in Figma 😅, but somethings had to be change. This is the project I planned: <br> 
@@ -34,3 +35,12 @@ This repository is a portifolio to show some of my projects, besides some course
 <img src='https://github.com/user-attachments/assets/0bb331b5-e3b0-4a73-ad20-a89af0331d0f' width='500px'> <br>
 <br>
 &nbsp; In the image, I had this problem with the hello hand image from the hero element. This happened because I was using the wrong path to indicate the image place
+
+## The website structure
+### Hero/Main Page
+  A little introduction about me and what I do. It has my name and my course on college: <br>
+  <br>
+  <img src='https://github.com/user-attachments/assets/44779465-ae1c-4328-bae6-5d1cd57e0a39' width='500px'>
+  <br>
+  
+
