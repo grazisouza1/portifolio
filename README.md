@@ -42,5 +42,24 @@ This repository is a portifolio to show some of my projects, besides some course
   <br>
   <img src='https://github.com/user-attachments/assets/44779465-ae1c-4328-bae6-5d1cd57e0a39' width='500px'>
   <br>
+
+### Experience section
+  &nbsp; The section shows some projects I did for syntax learning. They are simple projects, but I vould learn the basics of JavaScript, and understand some types of ligical thinking in that language <br>
+  <br>
+  <img src='https://github.com/user-attachments/assets/5f030257-6eae-40f5-abe3-e40715597733' width='500px'> <br>
+  <br>
+
+### Certificates section
+&nbsp; The certificates section is about some courses I did. I've sorted it with a filter that separates the courses by institution. It has some Curso em Vídeo courses and some from FreeCodeCamp. It was the first time Itried to do a filter like that. I really liked the results an I guess I'mma use this knowledge a lot in the future. <br>
+<br>
+<img src='https://github.com/user-attachments/assets/d1b39f8d-85f2-4e37-b9fd-1827d26ae539' width='500px'> <br>
+<br>
+`The last sections are about me, my academic path and the footer, with some of my social media.`
+
+---
+
+## Thank you for visiting my site! I hope you enjoyed it! For more information, just contact me :) 🎊
+  
+
   
 
