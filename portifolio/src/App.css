@@ -1,3 +1,17 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
@@ -24,7 +38,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  cursor: url(images/cursor-default.svg), auto;
+  /* cursor: url("/images/cursor-default.svg"), auto;  */
   background-color: var(--black);
   background-image: radial-gradient(
       circle at 80% 100%,
@@ -132,7 +146,7 @@ body {
 
 .icon-side-bar {
   width: 35px;
-  cursor: url(/images/cursor-click.svg), auto;
+  /* cursor: url("/images/cursor-click.svg"), auto; */
   background-color: var(--black);
   transition: backgound-color 0.3s ease;
   padding: 10px;
@@ -177,10 +191,10 @@ body {
   width: 50%;
 }
 
-.icon {
-  cursor: url(images/cursor-click.svg), auto;
+/* .icon {
+  cursor: url("/images/cursor-click.svg"), auto;
 }
-
+ */
 .icon:hover {
   opacity: 40%;
 }
@@ -321,14 +335,14 @@ body {
 button {
   background-color: transparent;
   border: none;
-  cursor: url(images/cursor-click.svg), auto;
+  /*   cursor: url("/images/cursor-click.svg"), auto; */
   transition: linear 0.1s;
   text-decoration: none;
 }
 
 a {
   text-decoration: none;
-  cursor: url(images/cursor-click.svg), auto;
+  /*   cursor: url("/images/cursor-click.svg"), auto; */
 }
 
 .abt-me-section {
