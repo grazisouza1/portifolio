@@ -37,13 +37,13 @@ function App() {
   hiddenElements.forEach((el) => observer.observe(el));
 
   return (
-    <body>
+    <div className="main">
       <aside className="menu-bar">
         <a href="#home">
           <img
             className="icon-side-bar"
             id="home-icon"
-            src="/images/home-icon.svg"
+            src={`${process.env.PUBLIC_URL}/images/home-icon.svg`}
             title="Home section"
             alt="home-icon"
           />
@@ -52,7 +52,7 @@ function App() {
           <img
             className="icon-side-bar"
             id="exp-icon"
-            src="/images/experience-icon.svg"
+            src={`${process.env.PUBLIC_URL}/images/experience-icon.svg`}
             title="Experiences section"
             alt="exp-icon"
           />
@@ -61,7 +61,7 @@ function App() {
           <img
             className="icon-side-bar"
             id="tech-icon"
-            src="/images/certificate-icon.svg"
+            src={`${process.env.PUBLIC_URL}/images/certificate-icon.svg`}
             title="Technologies section"
             alt="tech-icon"
           />
@@ -70,7 +70,7 @@ function App() {
           <img
             className="icon-side-bar"
             id="prof-icon"
-            src="/images/profile-icon.svg"
+            src={`${process.env.PUBLIC_URL}/images/profile-icon.svg`}
             title="About Me section"
             alt="prof-icon"
           />
@@ -81,7 +81,7 @@ function App() {
         <div id="home" className="hero">
           <section className="home-content hidden">
             <img
-              src="/images/hello-hand.svg"
+              src={`${process.env.PUBLIC_URL}/images/hello-hand.svg`}
               title="Hello hand"
               id="hello-hand"
               alt="hello-hand"
@@ -103,13 +103,17 @@ function App() {
           <section id="experience" className="section exp-section hidden">
             <h1 className="section-title">Experience</h1>
             <div className="exp-content">
-              <img className="arrow" src="/images/seta-esq.svg" alt="" />
+              <img
+                className="arrow"
+                src={`${process.env.PUBLIC_URL}/images/seta-esq.svg`}
+                alt=""
+              />
 
               <div className="projects">
                 <div className="project">
                   <img
                     className="project-img"
-                    src="/images/calculator-img.svg"
+                    src={`${process.env.PUBLIC_URL}/images/calculator-img.svg`}
                     alt=""
                   />
                   <div className="project-text">
@@ -122,7 +126,7 @@ function App() {
                       >
                         <img
                           className="icon icon-pc"
-                          src="/images/share-icon.svg"
+                          src={`${process.env.PUBLIC_URL}/images/share-icon.svg`}
                           alt=""
                         />
                       </a>
@@ -136,17 +140,17 @@ function App() {
                     <div className="technologies">
                       <img
                         className="technology-icon"
-                        src="/images/html-icon.svg"
+                        src={`${process.env.PUBLIC_URL}/images/html-icon.svg`}
                         alt=""
                       />
                       <img
                         className="technology-icon"
-                        src="/images/css-icon.svg"
+                        src={`${process.env.PUBLIC_URL}/images/css-icon.svg`}
                         alt=""
                       />
                       <img
                         className="technology-icon"
-                        src="/images/js-icon.svg"
+                        src={`${process.env.PUBLIC_URL}/images/js-icon.svg`}
                         alt=""
                       />
                     </div>
@@ -158,7 +162,7 @@ function App() {
                   >
                     <img
                       className="icon icon-cel"
-                      src="/images/share-icon.svg"
+                      src={`${process.env.PUBLIC_URL}/images/share-icon.svg`}
                       alt="Go to Calculator"
                     />
                   </a>
@@ -167,7 +171,7 @@ function App() {
                 <div className="project">
                   <img
                     className="project-img"
-                    src="images/random-letter-img.svg"
+                    src={`${process.env.PUBLIC_URL}/images/random-letter-img.svg`}
                     alt=""
                   />
                   <div className="project-text">
@@ -180,11 +184,12 @@ function App() {
                       >
                         <img
                           className="icon icon-pc"
-                          src="images/share-icon.svg"
+                          src={`${process.env.PUBLIC_URL}/images/share-icon.svg`}
                           alt=""
                         />
                       </a>
                     </div>
+
                     <div className="project-desc">
                       A calculator with basic operations. The design is not
                       responsive
@@ -194,21 +199,22 @@ function App() {
                     <div className="technologies">
                       <img
                         className="technology-icon"
-                        src="images/html-icon.svg"
+                        src={`${process.env.PUBLIC_URL}/images/html-icon.svg`}
                         alt="Html Icon"
                       />
                       <img
                         className="technology-icon"
-                        src="images/css-icon.svg"
+                        src={`${process.env.PUBLIC_URL}/images/css-icon.svg`}
                         alt=""
                       />
                       <img
                         className="technology-icon"
-                        src="images/js-icon.svg"
+                        src={`${process.env.PUBLIC_URL}/images/js-icon.svg`}
                         alt=""
                       />
                     </div>
                   </div>
+
                   <a
                     href="https://foundation-projects-gra.vercel.app/random-letter-generator/index.html"
                     target="_blank"
@@ -216,7 +222,7 @@ function App() {
                   >
                     <img
                       className="icon icon-cel"
-                      src="images/share-icon.svg"
+                      src={`${process.env.PUBLIC_URL}/images/share-icon.svg`}
                       alt=""
                     />
                   </a>
@@ -225,7 +231,7 @@ function App() {
                 <div className="project">
                   <img
                     className="project-img"
-                    src="images/pyramid-img.svg"
+                    src={`${process.env.PUBLIC_URL}/images/pyramid-img.svg`}
                     alt=""
                   />
                   <div className="project-text">
@@ -238,7 +244,7 @@ function App() {
                       >
                         <img
                           className="icon icon-pc"
-                          src="images/share-icon.svg"
+                          src={`${process.env.PUBLIC_URL}/images/share-icon.svg`}
                           alt=""
                         />
                       </a>
@@ -252,17 +258,17 @@ function App() {
                     <div className="technologies">
                       <img
                         className="technology-icon"
-                        src="images/html-icon.svg"
+                        src={`${process.env.PUBLIC_URL}/images/html-icon.svg`}
                         alt="Html Icon"
                       />
                       <img
                         className="technology-icon"
-                        src="images/css-icon.svg"
+                        src={`${process.env.PUBLIC_URL}/images/css-icon.svg`}
                         alt=""
                       />
                       <img
                         className="technology-icon"
-                        src="images/js-icon.svg"
+                        src={`${process.env.PUBLIC_URL}/images/js-icon.svg`}
                         alt=""
                       />
                     </div>
@@ -274,14 +280,18 @@ function App() {
                   >
                     <img
                       className="icon icon-cel"
-                      src="images/share-icon.svg"
+                      src={`${process.env.PUBLIC_URL}/images/share-icon.svg`}
                       alt=""
                     />
                   </a>
                 </div>
               </div>
 
-              <img className="arrow" src="images/seta-dir.svg" alt="" />
+              <img
+                className="arrow"
+                src={`${process.env.PUBLIC_URL}/images/seta-dir.svg`}
+                alt=""
+              />
             </div>
           </section>
 
@@ -343,7 +353,7 @@ function App() {
               </p>
               <img
                 className="abt-me-img"
-                src="images/graziella-img.svg"
+                src={`${process.env.PUBLIC_URL}/images/graziella-img.svg`}
                 id="abt-me-img"
                 title="Graziella Souza (Me)"
                 alt="Grazi"
@@ -395,7 +405,7 @@ function App() {
           </footer>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
 
